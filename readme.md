@@ -8,7 +8,7 @@ as filling in a few regexes - everything else is taken care of.
 
 ## Installation
 
-    python setup.py install
+Run `pip install mangopi`, or clone the repo and run `python setup.py install`.
 
 ## Layout
 
