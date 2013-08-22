@@ -1,7 +1,10 @@
-# Redux
+# mangopi
 
 [![Build Status](https://travis-ci.org/jiaweihli/mangopi.png)](https://travis-ci.org/jiaweihli/mangopi)
 [![Coverage Status](https://coveralls.io/repos/jiaweihli/mangopi/badge.png?branch=master)](https://coveralls.io/r/jiaweihli/mangopi?branch=master)
+
+mangopi aims to be an easy-to-use, easy-to-extend manga api.  Adding a new site should be as simple
+as filling in a few regexes - everything else is taken care of.
 
 ## Installation
 
@@ -44,7 +47,7 @@ issues related to error correction that are being worked out however):
     >>> search.series('death note').chapters['22'].pages[0].image.url
     'http://i39.mangapanda.com/death-note/22/death-note-1678383.jpg'
 
-Take a look at the `test/` folder for further examples.
+Take a look at the `mangopi.tests` module for further examples.
 
 ## Version Support
 
