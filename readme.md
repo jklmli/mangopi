@@ -8,52 +8,41 @@
     python setup.py install
 
 ## Layout
+
 `helper` contains some shared, non-application-specific code.  (Or it will, after the Util class
 is removed.)
 
 `site` contains the library logic to retrieve data from the websites.  The hierarchy:
 
-> MangaSite
->
->   - Noez
->     - MangaFox
->     - MangaHere
->   - Aftv
->     - MangaPanda
->     - MangaReader
+    MangaSite
+      - Noez
+        - MangaFox
+        - MangaHere
+      - Aftv
+        - MangaPanda
+        - MangaReader
 
 Noez and Aftv appear to be the parent companies of the sites that exist under them.
 
 ## Usage
 
-### Use Case
 Q: What's the image url for the first page of the first chapter of 'Toriko'?
 
-
-> \>\>\> from mangopi.site.mangafox import MangaFox
-
-> \>\>\> MangaFox.series('toriko').chapters[0].pages[0].image.url
-
-> 'http://z.mfcdn.net/store/manga/3660/01-001.0/compressed/toriko_v01_c01_01.jpg'
+    >>> from mangopi.site.mangafox import MangaFox
+    >>> MangaFox.series('toriko').chapters[0].pages[0].image.url
+    'http://z.mfcdn.net/store/manga/3660/01-001.0/compressed/toriko_v01_c01_01.jpg'
 
 Alternatively, use MetaSite, which allows aggregation of multiple sites (there are some performance
 issues related to error correction that are being worked out however):
 
-> \>\>\> from mangopi.metasite import MetaSite
-
-> \>\>\> search = MetaSite([MangaFox, MangaHere, MangaPanda, MangaReader])
-
-> \>\>\> from mangopi.site.mangafox import MangaFox
-
-> \>\>\> from mangopi.site.mangahere import MangaHere
-
-> \>\>\> from mangopi.site.mangapanda import MangaPanda
-
-> \>\>\> from mangopi.site.mangareader import MangaReader
-
-> \>\>\> search.series('death note').chapters['22'].pages[0].image.url
-
-> 'http://i39.mangapanda.com/death-note/22/death-note-1678383.jpg'
+    >>> from mangopi.metasite import MetaSite
+    >>> search = MetaSite([MangaFox, MangaHere, MangaPanda, MangaReader])
+    >>> from mangopi.site.mangafox import MangaFox
+    >>> from mangopi.site.mangahere import MangaHere
+    >>> from mangopi.site.mangapanda import MangaPanda
+    >>> from mangopi.site.mangareader import MangaReader
+    >>> search.series('death note').chapters['22'].pages[0].image.url
+    'http://i39.mangapanda.com/death-note/22/death-note-1678383.jpg'
 
 Take a look at the `test/` folder for further examples.
 
@@ -64,8 +53,4 @@ dependency.
 
 ## Testing
 
-    python setup.py test
-
-Alternatively, run
-
-    nosetests
+Run `python setup.py test` or `nosetests`.
