@@ -1,4 +1,5 @@
 *.pyc
+/build/
 /dist/
 src/__pycache__/
 /*.egg-info
