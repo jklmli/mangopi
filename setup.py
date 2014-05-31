@@ -6,7 +6,7 @@ from setuptools import setup
 setup(
     name='mangopi',
     author='Jiawei Li',
-    version='0.2.0',
+    version='0.2.1',
     description='A manga API with a pluggable site architecture.',
     keywords='manga api',
     install_requires=['underscore.py==0.1.6'],
@@ -15,5 +15,5 @@ setup(
     url='https://github.com/jiaweihli/mangopi/',
     author_email='jiawei.h.li@gmail.com',
     license='MIT',
-    packages=['mangopi', 'mangopi.site']
+    packages=['mangopi', 'mangopi.helper', 'mangopi.helper.traits', 'mangopi.site']
 )
