@@ -13,6 +13,9 @@ class MangaSite(object):
     @classmethod
     @memoize
     def series(cls, name):
+        """
+        :rtype: MangaSite.Series
+        """
         return cls.Series(cls, name)
 
     class Chapter(HasUrl):
@@ -24,7 +27,7 @@ class MangaSite(object):
 
         def __init__(self, series, title, url):
             """
-            :type series: Series
+            :type series: MangaSite.Series
             :type title: str
             :type url: str
             """
@@ -70,7 +73,7 @@ class MangaSite(object):
         @memoize
         def pages(self):
             """
-            :rtype: list of Page
+            :rtype: list of MangaSite.Page
             """
             pass
 
@@ -81,7 +84,7 @@ class MangaSite(object):
 
         def __init__(self, chapter, url):
             """
-            :type chapter: Chapter
+            :type chapter: MangaSite.Chapter
             :type url: str
             """
             self.chapter = chapter
@@ -130,6 +133,6 @@ class MangaSite(object):
         @memoize
         def chapters(self):
             """
-            :rtype: list of Chapter
+            :rtype: list of MangaSite.Chapter
             """
             pass

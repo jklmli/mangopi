@@ -8,9 +8,7 @@ from mangopi.site.mangareader import MangaReader
 
 
 class TestMetaSite(TestCase):
-    SITE = MetaSite(dict())
-    SITE.modules = [MangaFox, MangaHere, MangaPanda, MangaReader]
-
+    SITE = MetaSite([MangaFox, MangaHere, MangaPanda, MangaReader])
     CHAPTERS = SITE.series('death note').chapters
 
     def test_chapter_length(self):

@@ -54,7 +54,7 @@ class MetaSite(object):
             """
             :type series: MetaSeries
             :type chapter: str
-            :type choices: list of redux.site.mangasite.MangaSite.Chapter
+            :type choices: list of site.mangasite.MangaSite.Chapter
             """
             self.series = series
             self.chapter = chapter
@@ -76,7 +76,7 @@ class MetaSite(object):
         @memoize
         def first_available_choice(self):
             """
-            :rtype: redux.site.mangasite.MangaSite.Chapter
+            :rtype: site.mangasite.MangaSite.Chapter
             """
             return _(self.choices).find(
                 lambda chapter, *args: (_(chapter.pages).chain()
@@ -89,6 +89,6 @@ class MetaSite(object):
         @memoize
         def pages(self):
             """
-            :rtype: list of redux.site.mangasite.MangaSite.Page
+            :rtype: list of site.mangasite.MangaSite.Page
             """
             return self.first_available_choice.pages
