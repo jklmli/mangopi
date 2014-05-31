@@ -9,7 +9,7 @@ setup(
     version='0.1.1',
     description='A manga API with a pluggable site architecture.',
     keywords='manga api',
-    install_requires=['underscore.py==0.1.3'],
+    install_requires=['underscore.py==0.1.6'],
     test_suite='nose.collector',
     tests_require=['nose'],
     url='https://github.com/jiaweihli/mangopi/',

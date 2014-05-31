@@ -51,8 +51,7 @@ Take a look at the `mangopi.tests` module for further examples.
 
 ## Version Support
 
-Support is maintained on Python 2.7.  Support for 3.2 and 3.3 is pending a pull request in a
-dependency.
+Support is maintained on Python 2.7, 3.3, and 3.4.
 
 ## Testing
 
