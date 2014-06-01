@@ -6,7 +6,7 @@ from setuptools import setup
 setup(
     name='mangopi',
     author='Jiawei Li',
-    version='0.2.1',
+    version='0.2.1.1',
     description='A manga API with a pluggable site architecture.',
     keywords='manga api',
     install_requires=['underscore.py==0.1.6'],

@@ -6,7 +6,7 @@ from mangopi.site.noez import Noez
 class MangaHere(Noez):
     class Chapter(Noez.Chapter):
         VOLUME_AND_CHAPTER_FROM_URL_REGEX = re.compile(
-            'http://www.mangahere.com/manga/[^/]*/(v(?P<volume>[^/]*)/)?c(?P<chapter>[^/]*)')
+            'http://www.mangahere.co/manga/[^/]*/(v(?P<volume>[^/]*)/)?c(?P<chapter>[^/]*)')
         TOTAL_PAGES_FROM_SOURCE_REGEX = re.compile('var total_pages = (?P<count>[^;]*?);')
 
     class Page(Noez.Page):
