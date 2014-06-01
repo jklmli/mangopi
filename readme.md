@@ -39,11 +39,11 @@ Alternatively, use MetaSite, which allows aggregation of multiple sites (there a
 issues related to error correction that are being worked out however):
 
     >>> from mangopi.metasite import MetaSite
-    >>> search = MetaSite([MangaFox, MangaHere, MangaPanda, MangaReader])
     >>> from mangopi.site.mangafox import MangaFox
     >>> from mangopi.site.mangahere import MangaHere
     >>> from mangopi.site.mangapanda import MangaPanda
     >>> from mangopi.site.mangareader import MangaReader
+    >>> search = MetaSite([MangaFox, MangaHere, MangaPanda, MangaReader])
     >>> search.series('death note').chapters['22'].pages[0].image.url
     'http://i39.mangapanda.com/death-note/22/death-note-1678383.jpg'
 
