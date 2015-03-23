@@ -14,6 +14,6 @@ class MangaHere(Noez):
 
     class Series(Noez.Series):
         CHAPTER_FROM_SOURCE_REGEX = re.compile(
-            '0077" href="(?P<url>[^"]*)" >.*?<span class="mr6">[^<]*?</span>(?P<title>.*?)</span>',
+            '0077" href="(?P<url>[^"]*)/" >.*?<span class="mr6">[^<]*?</span>(?P<title>.*?)</span>',
             re.DOTALL)
         TEMPLATE_URL = 'http://www.mangahere.com/manga/{name}/'

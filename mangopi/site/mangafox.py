@@ -14,5 +14,5 @@ class MangaFox(Noez):
 
     class Series(Noez.Series):
         CHAPTER_FROM_SOURCE_REGEX = re.compile(
-            'a href="(?P<url>[^"]*)" title=.*?(title nowrap">(?P<title>[^<]*))?<\/span>', re.DOTALL)
+            'a href="(?P<url>[^"]*)/1.html" title=.*?(title nowrap">(?P<title>[^<]*))?<\/span>', re.DOTALL)
         TEMPLATE_URL = 'http://mangafox.me/manga/{name}/'

@@ -12,7 +12,7 @@ class TestMetaSite(TestCase):
     CHAPTERS = SITE.series('death note').chapters
 
     def test_chapter_length(self):
-        self.assertEqual(len(TestMetaSite.CHAPTERS), 112)
+        self.assertEqual(len(TestMetaSite.CHAPTERS), 111)
 
     def test_chapter_title(self):
         chapter = TestMetaSite.CHAPTERS['42']
